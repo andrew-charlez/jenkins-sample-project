@@ -1,0 +1,16 @@
+FROM jenkins/jenkins:latest
+
+# Skip initial setup
+ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
+
+USER root
+RUN apt-get update \
+      && apt-get install -y sudo \
+      && apt-get install -y sudo libltdl-dev \
+      && apt-get install -y python \
+      && apt-get install -y python-pip
+ 
+ # User name and Password
+ENV JENKINS_USER: admin
+ENV JENKINS_PASS: AAbbcc
+
