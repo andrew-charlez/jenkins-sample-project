@@ -9,8 +9,13 @@ RUN apt-get update \
       && apt-get install -y sudo libltdl-dev \
       && apt-get install -y python \
       && apt-get install -y python-pip
- 
+
+ARG JENKINS_PASS
+ARG JENKINS_USER
+
  # User name and Password
-ENV JENKINS_USER: admin
-ENV JENKINS_PASS: AAbbcc
+ENV JENKINS_USER: $JENKINS_USER
+ENV JENKINS_PASS: $JENKINS_PASS
+
+
 
