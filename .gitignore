@@ -1,3 +1,4 @@
 .gitsecret/keys/random_seed
 **/JENKINSPASS.txt
 **/JENKINSUSER.txt
+**/ci_server_global.pem

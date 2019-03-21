@@ -10,10 +10,11 @@ RUN apt-get update \
       && apt-get install -y python \
       && apt-get install -y python-pip
 
+# User name and Password
 ARG JENKINS_PASS
 ARG JENKINS_USER
 
- # User name and Password
+ 
 ENV JENKINS_USER: $JENKINS_USER
 ENV JENKINS_PASS: $JENKINS_PASS
 
